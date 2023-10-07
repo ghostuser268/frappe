@@ -1,5 +1,5 @@
 frappe.provide("frappe.ui");
-
+console.log("aiksudhujikh")
 frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 	constructor() {
 		this.setup_dialog();
