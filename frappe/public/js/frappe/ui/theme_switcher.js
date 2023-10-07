@@ -1,4 +1,8 @@
 frappe.provide("frappe.ui");
+
+
+
+
 frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 	constructor() {
 		this.setup_dialog();
@@ -51,6 +55,7 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 	}
 
 	fetch_themes() {
+		console.log("kjasd")
 		return new Promise((resolve) => {
 			this.themes = [
 				{
@@ -75,6 +80,7 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 	}
 
 	render() {
+		console.log("kjasd")
 		this.themes.forEach((theme) => {
 			let html = this.get_preview_html(theme);
 			html.appendTo(this.body);
@@ -110,6 +116,7 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 		</div>`);
 
 		preview.on("click", () => {
+			console.log("kjasd")
 			if (this.current_theme === theme.name) return;
 
 			this.themes.forEach((th) => {
