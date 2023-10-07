@@ -117,6 +117,12 @@
 
 	color-scheme: dark;
 
+	input {
+		background-color: var(--bg-color);
+		&:focus{
+			background-color: var(--bg-color);
+		}
+	}
 	.frappe-card {
 		.btn-default {
 			background-color: var(--bg-color);
