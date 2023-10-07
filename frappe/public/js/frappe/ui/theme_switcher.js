@@ -110,7 +110,6 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 		</div>`);
 
 		preview.on("click", () => {
-			console.log("aiksudhujikh");
 			if (this.current_theme === theme.name) return;
 
 			this.themes.forEach((th) => {
@@ -125,7 +124,6 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 	}
 
 	toggle_theme(theme) {
-		console.log("aiksudhujikh");
 		this.current_theme = theme.toLowerCase();
 		document.documentElement.setAttribute("data-theme-mode", this.current_theme);
 		frappe.show_alert(__("Theme Changed"), 3);
