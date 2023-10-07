@@ -1,8 +1,5 @@
 frappe.provide("frappe.ui");
 
-
-
-
 frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 	constructor() {
 		this.setup_dialog();
@@ -48,39 +45,26 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 	}
 
 	refresh() {
-		this.current_theme = document.documentElement.getAttribute("data-theme-mode") || "light";
+		this.current_theme = document.documentElement.getAttribute("data-theme-mode") || "dark";
 		this.fetch_themes().then(() => {
 			this.render();
 		});
 	}
 
 	fetch_themes() {
-		console.log("kjasd")
 		return new Promise((resolve) => {
 			this.themes = [
 				{
-					name: "light",
-					label: __("Frappe Light"),
-					info: __("Light Theme"),
-				},
-				{
 					name: "dark",
-					label: __("Timeless Night"),
+					label: __("Nixity Dark"),
 					info: __("Dark Theme"),
-				},
-				{
-					name: "automatic",
-					label: __("Automatic"),
-					info: __("Uses system's theme to switch between light and dark mode"),
-				},
+				}
 			];
-
 			resolve(this.themes);
 		});
 	}
 
 	render() {
-		console.log("kjasd")
 		this.themes.forEach((theme) => {
 			let html = this.get_preview_html(theme);
 			html.appendTo(this.body);
@@ -116,7 +100,6 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 		</div>`);
 
 		preview.on("click", () => {
-			console.log("kjasd")
 			if (this.current_theme === theme.name) return;
 
 			this.themes.forEach((th) => {
