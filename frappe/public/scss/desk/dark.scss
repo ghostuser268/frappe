@@ -127,7 +127,7 @@
 	}
 
 	body {
-		a,input[type="checkbox"]:checked,.indicator-pill {
+		input[type="checkbox"]:checked,.indicator-pill {
 			background-color:  var(--yellow-700);
 		}
 		.btn-primary{
