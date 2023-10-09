@@ -7,9 +7,9 @@
     --gray-500: #575e66;
     --gray-600: #434344;
     --gray-700: #1A181B;
-    --gray-800: #222023;
-    --gray-900: #1A181B;
-	--yellow-700: #e9794a;
+    --gray-800: #292a2b;
+    --gray-900: #131415;
+	//--yellow-700: #e9794a;
 	// Type Colors
 	--text-muted: var(--gray-300);
 	--text-light: var(--gray-300);
@@ -123,6 +123,12 @@
 			background-color: var(--bg-color);
 		}
 	}
+.driver-next-btn{
+	background-color: #ef4a33 !important;
+	&:hover{
+		background-color: #ef4a33 !important;
+	}
+}
 	.frappe-card {
 		.btn-default {
 			background-color: var(--bg-color);
