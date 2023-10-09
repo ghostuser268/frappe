@@ -126,17 +126,22 @@
 		}
 	}
 
-	body .btn-primary{
-		&:active:focus {
+	body {
+		a,input[type="checkbox"]:checked,.indicator-pill {
 			background-color:  var(--yellow-700);
 		}
-		&:active {
+		.btn-primary{
+			&:active:focus {
+				background-color:  var(--yellow-700);
+			}
+			&:active {
+				background-color:  var(--yellow-700);
+			}
+			&:hover{
+				background-color:  var(--yellow-700);
+			}
 			background-color:  var(--yellow-700);
 		}
-		&:hover{
-		background-color:  var(--yellow-700);
-		}
-		background-color:  var(--yellow-700);
 	}
 
 	.driver-next-btn {
