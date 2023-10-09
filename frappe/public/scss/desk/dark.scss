@@ -127,8 +127,11 @@
 	}
 
 	body {
-		input[type="checkbox"]:checked,.indicator-pill {
-			background-color:  var(--yellow-700);
+		//h3.ellipsis > .indicator-pill{
+			//background: none ;
+		//}
+		input[type="checkbox"]:checked,span .indicator-pill {
+			background-color:  var(--yellow-700) !important;
 		}
 		.btn-primary{
 			&:active:focus {
