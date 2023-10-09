@@ -1,15 +1,15 @@
 [data-theme="dark"] {
 	--gray-50: #F9FAFA;
-    --gray-100: #f7fafc;
-    --gray-200: #edf2f7;
-    --gray-300: #a6a3a3;
-    --gray-400: #313030;
-    --gray-500: #575e66;
-    --gray-600: #434344;
-    --gray-700: #1A181B;
-    --gray-800: #292a2b;
-    --gray-900: #131415;
-	//--yellow-700: #e9794a;
+	--gray-100: #f7fafc;
+	--gray-200: #edf2f7;
+	--gray-300: #a6a3a3;
+	--gray-400: #313030;
+	--gray-500: #575e66;
+	--gray-600: #434344;
+	--gray-700: #1A181B;
+	--gray-800: #292a2b;
+	--gray-900: #131415;
+	--yellow-700: #ef4635;
 	// Type Colors
 	--text-muted: var(--gray-300);
 	--text-light: var(--gray-300);
@@ -117,18 +117,30 @@
 
 	color-scheme: dark;
 
+
 	input {
 		background-color: var(--bg-color);
-		&:focus{
+
+		&:focus {
 			background-color: var(--bg-color);
 		}
 	}
-.driver-next-btn{
-	background-color: #ef4a33 !important;
-	&:hover{
-		background-color: #ef4a33 !important;
+
+	body .btn-primary{
+		&:hover{
+		background-color:  var(--yellow-700);
+		}
+		background-color:  var(--yellow-700);
 	}
-}
+
+	.driver-next-btn {
+		background-color: #ef4a33 !important;
+
+		&:hover {
+			background-color: #ef4a33 !important;
+		}
+	}
+
 	.frappe-card {
 		.btn-default {
 			background-color: var(--bg-color);
@@ -152,7 +164,9 @@
 
 	.ql-editor {
 		color: var(--text-on-gray);
+
 		&.read-mode {
+
 			span:not(.mention),
 			p,
 			u,
@@ -162,6 +176,7 @@
 			}
 		}
 	}
+
 	// --appreciation-color: var(--dark-green-100);
 	// --appreciation-bg: var(--dark-green-600);
 	// --criticism-color: var(--red-100);
@@ -186,7 +201,7 @@
 
 	// find better fix
 	.heatmap-chart {
-		g > rect[fill="#ebedf0"] {
+		g>rect[fill="#ebedf0"] {
 			fill: var(--gray-700);
 		}
 	}
@@ -194,6 +209,7 @@
 	.rating {
 		// rating
 		--star-fill: var(--gray-500);
+
 		.star-hover {
 			--star-fill: var(--gray-400);
 		}
@@ -212,6 +228,7 @@
 	}
 
 	$indicator-colors: green, cyan, blue, orange, yellow, gray, grey, red, pink, darkgrey, purple, light-blue;
+
 	@each $color in $indicator-colors {
 		.indicator {
 			--indicator-dot-#{"" + $color}: var(--bg-#{$color});
